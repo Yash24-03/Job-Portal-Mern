@@ -15,7 +15,7 @@ const MyJobs = () => {
   // console.log(control)
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/${user?.email}`)
+    fetch(`https://job-portal-mern-1.onrender.com/myJobs/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -50,7 +50,7 @@ const MyJobs = () => {
   // delete a books
   const handleDelete = (id) => {
     // console.log(id)
-    fetch(`http://localhost:5000/job/${id}`, {
+    fetch(`https://job-portal-mern-1.onrender.com/job/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
